@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Exercise #3: Changing images</title>
+   <script>
+       function changeImage() {
+           var s = document.getElementById("country");
+           var img = document.getElementById("img");
+           img.src = s.options[s.selectedIndex].value;
+           img.alt = s.options[s.selectedIndex].text;
+       }
+   </script>
+</head>
+<body>
+<form name="form">
+   <select name="country" id="country" onchange="changeImage();">
+       <option value="https://i.stack.imgur.com/tDPMH.png">Select</option>
+       <option value="http://flags.fmcdn.net/data/flags/w580/no.png">Norway</option>
+       <option value="https://node01.flagstat.net/media/catalog/product/detail/12736.png">Sweden</option>
+       <option value="https://www.gettysburgflag.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/d/e/denmark.jpg">Denmark</option>
+       <option value="http://flags.fmcdn.net/data/flags/w580/is.png">Iceland</option>
+   </select>
+</form>
+<img id="img" src="https://i.stack.imgur.com/tDPMH.png" style="border: 1px solid black" alt="No image selected"/>
+</body>
+</html>
